@@ -1,9 +1,10 @@
 /*
  * @Author: Steven G
- * @Date: 2022-12-28 15:59:05
+ * @Date: 2022-12-28 20:36:17
  * @Last Modified by: Steven G
- * @Last Modified time: 2022-12-28 21:05:24
+ * @Last Modified time: 2022-12-28 21:07:50
  */
+
 #include "../../std_lib_facilities.h"
 
 bool find_prime(int i)
@@ -18,10 +19,13 @@ bool find_prime(int i)
 
 int main()
 {
+    int max;
+    cout << "Find Prime between 1 to max, max: \n";
+    cin >> max;
     vector<int> prime;
     cout << "0 is a composite number\n";
     cout << "1 is a composite number\n";
-    for (int i = 2; i < 101; i++)
+    for (int i = 2; i <= max; i++)
     {
         if (find_prime(i))
         {
@@ -42,6 +46,6 @@ int main()
         }
     }
     for (int x : prime) // print vector prime
-                cout << x << ',';
-            cout << "\n";
+        cout << x << ',';
+    cout << "\n";
 }
